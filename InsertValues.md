@@ -97,3 +97,35 @@ INSERT INTO inscripcio(codi, nom, data) VALUES
 (30, 'Rubius Jr', '2026-09-01'),
 (10, 'Josep Jr', '2024-09-01');
 ```
+### INSERTAR EN PRESTECS ###
+
+```console
+INSERT INTO prestecs(codi, interes, concedit, data, dni_empleat) VALUES
+(501, 3.50, TRUE, '2025-05-10', '1111F'),
+(502, 2.75, TRUE, '2025-08-22', '3333A'),
+(503, 4.10, FALSE, '2026-01-15', '5555W'),
+(504, 1.95, TRUE, '2026-03-30', '6666T'),
+(505, 3.20, TRUE, '2026-06-12', '4444E'),
+(506, 2.50, TRUE, '2026-09-01', '2222Z');
+```
+### INSERTAR EN MATRIMONI ###
+
+```console
+INSERT INTO matrimoni(codi_prestecs) VALUES
+(502),
+(505);
+```
+### INSERTAR EN VIVENDA ###
+
+```console
+INSERT INTO vivenda(codi_prestecs) VALUES
+(501),
+(506);
+```
+### INSERTAR EN ESTUDIS ###
+
+```console
+INSERT INTO estudis(codi_prestecs) VALUES
+(503),
+(504);
+```
